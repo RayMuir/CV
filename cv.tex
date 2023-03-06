@@ -1,0 +1,114 @@
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
+
+
+\documentclass[12pt, a4paper, sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue} 
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}    % Width of the entire CV
+\setlength{\hintscolumnwidth}{4.1cm} % Width of the timeline on your left
+\usepackage{pdfpages/pdfpages}
+\usepackage{moderntimeline/moderntimeline}
+\usepackage{xpatch/xpatch}
+\usepackage{color, graphicx}
+\tlmaxdates{2016}{2023}              % Beggining and start of your timeline                        
+
+\newcommand{\cvreferencecolumn}[2]{%
+  \cvitem[0.8em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[8]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
+
+% Personal Information
+\name{Rachel Muir\newline}{}
+\title{\emph{Curriculum Vitae}}                              
+\phone[mobile]{+44~(07)~483~808~358}                   
+\email{rm717@kent.ac.uk}               
+\quote{Durum Patientia Frango}                       
+\makeatother
+
+
+\begin{document}
+
+\makecvtitle
+
+\section{Educational Background}
+
+\bigskip
+
+\tlcventry{2019}{0}{BSc (Hons)}{University of Kent, Canterbury}{}{}{Strong foundation in Java, Haskell, OCaml, Erlang, Go, and C++ programming skills, writing algorithms, testing, refining code and deploying it on the university system. 
+\\
+Knowledge of web technologies including HMTL, CSS, JavaScript, PHP and MySQL. 
+\\ 
+Computer Systems led to valuable insight about low-level architecture, assembly, and high-level abstract structures. Programming Language Implementation built upon this to enrich my knowledge covering compilers. Understanding the multitude of complex sections that build a complier through extending the parser, AST, CFG and Optimizer has been invaluable for my research in software verification (x86) through formal semantics. \\ Theory of Concurrency linked with the aforementioned module to describe models of hardware and the difficulties behind various memory models, especially concerning complexities surrounding concurrent code across distributed systems and web-services with asynchronous and synchronous message passing. 
+\\
+The creation of intelligent systems (AI) and heuristic searches increased my proficiency in algorithm writing. 
+\\
+Theory of Computing combined maths, modelling systems and logical semantics to describe the mechanisms behind systems, and proofs to confirm their behaviour.
+\\
+Internet of Things introduced me to basic electronics, development kits with development environments, and capturing and processing data through multiple devices communicating. This enabled me to begin designing my own bespoke PCBs containing circuitry I created, code software to utilise microcontrollers, and deep diving to low level architecture to create my own versions of various development boards.}
+
+\bigskip
+
+\tlcventry{2016}{2019}{College Qualifications}{Bexhill College}{}{}{}
+\cvitemwithcomment{Applied Science}{180 Credit Extended Diploma}{\emph{Distinction* Distinction* Distinction*}}
+%\medskip
+\cvitemwithcomment{Information Technologies}{90 Credit Certificate}{\emph{Distinction* Distinction*}}
+%\medskip
+\cvitemwithcomment{Mathematical Studies}{Certificate}{\emph{B}}
+%\medskip
+\cvitemwithcomment{7 GCSEs}{Grades 7-C}{\emph{Maths 7, English B}}
+
+\medskip
+\section{Research Projects}
+
+\medskip
+
+\subsection{\textbf{Undergraduate Research Project}}
+
+\tlcventry{2022}{0}{Formal Verification of MIR-to-MIR Optimisations}{}{}{}{}
+\cvitem{\textbf{ADVISOR}}{Professor Mark Batty}
+
+\bigskip
+
+\section{Work Experience}
+
+\tlcventry{2019}{2022}{Academic Ambassador}{University of Kent}{Canterbury}{}{Working for the central university and School of Computing has involved demonstrating the advantages of further education (FE) and giving insight into student life through on-campus tours and virtual/physical open days such as the First Lego League Challenge. I liaise with teaching staff at outreach schools, and teach secondary school to college age students with regards to FE, it’s processes and what to expect. I adapt my communication style accordingly when delivering presentations to up to 30 students. I further develop my skills and confidence by designing and delivering succinct, polished presentations. The transition during the pandemic required effective organisation and adaption when transitioning to online-only during Covid-19 where I had to learn methods of effective information delivery through various mediums.}
+
+\medskip
+
+\tlcventry{2021}{2022}{Developer and Maintainer}{Smart Start Minds}{London - Remote}{}{In my second year of University, I was invited into a start-up research firm to join a team of developers which research and develop bespoke hardware and software to improve and treat mental health conditions. Our neurofeedback hardware, in the form of non-invasive imaging (fNIRS), measures changes in the concentration of oxygenated haemoglobin. 
+I designed a prototype web-based (offline and online) system to be used globally. Alongside our hardware, to detect lulls in mental concentration, prompting the user to perform an activity and increasing concentration to above baseline. The development of our world-leading treatment allows conscious alteration of the nervous system at an affordable cost. This prototype enabled the company to demonstrate the viability of an automated self-treatment method to businesses and funders interested in using or developing this technology. More importantly, it demonstrated accessible and affordable treatment globally, by allowing treatment of patients in low socio-economic areas and/or patients without access to in-person healthcare, internet, or medical funding.}
+
+\medskip
+
+\tldatecventry{2022}{Rolls-Royce Data Scientist}{R\textsuperscript{2} Data Labs}{London - Hybrid}{}{During my time at R\textsuperscript{2} Data Labs, I was apart of a team that developed software for customers. This involved programming in python, learning data science methods and libraries, daily stand-ups, project management with GitHub, communicating requirements with the customer and getting feedback, and following an agile work method. Our projects consisted of making NLP based software to aid the customer in completing required tasks, and presenting that data in a human-readable way. We worked through prototyping stages over multiple weeks and developed the software into minimum-viable-product, which was then delivered to the customer.}
+
+\medskip
+
+\section{Prizes}
+\tldatecventry{2022}{Undergraduate of the Year 2022}{Target Jobs}{}{}{}
+
+\section{Conferences}
+\tldatecventry{2020}{36th Chaos Communication Congress}{Technology and Cyber Security Conference}{}{Leipzig}{}
+
+
+\section{References}
+\cvitemwithcomment{Dominic Orchard}{D.Orchard@kent.ac.uk}{}
+\cvitemwithcomment{David Castro-Perez}{D.Castro-Perez@kent.ac.uk}{}
+\clearpage
+
+\end{document}
