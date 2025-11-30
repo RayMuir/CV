@@ -1,0 +1,201 @@
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderntimeline
+% https://www.ctan.org/tex-archive/macros/latex/contrib/moderncv
+
+
+\documentclass[12pt, a4paper, sans]{moderncv}
+\moderncvstyle{classic}
+\moderncvcolor{blue} 
+\usepackage[utf8]{inputenc}
+\usepackage[scale=0.85]{geometry}    % Width of the entire CV
+\setlength{\hintscolumnwidth}{3cm} % Width of the timeline on your left
+\usepackage{pdfpages/pdfpages}
+\usepackage{moderntimeline/moderntimeline}
+\usepackage{xpatch/xpatch}
+\usepackage{color, graphicx}
+\tlmaxdates{2016}{2025}        % Beggining and start of your timeline                        
+
+\newcommand{\cvreferencecolumn}[2]{%
+  \cvitem[0.8em]{}{%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#1\end{minipage}%
+    \hfill%
+    \begin{minipage}[t]{\listdoubleitemmaincolumnwidth}#2\end{minipage}%
+    }%
+}
+
+\newcommand{\cvreference}[8]{%
+    \textbf{#1}\newline% Name
+    \ifthenelse{\equal{#2}{}}{}{\addresssymbol~#2\newline}%
+    \ifthenelse{\equal{#3}{}}{}{#3\newline}%
+    \ifthenelse{\equal{#4}{}}{}{#4\newline}%
+    \ifthenelse{\equal{#5}{}}{}{#5\newline}%
+    \ifthenelse{\equal{#6}{}}{}{\emailsymbol~\texttt{\href{mailto:#6}{\nolinkurl{#6}}}\newline}%
+    \ifthenelse{\equal{#7}{}}{}{\phonesymbol~#7\newline}
+    \ifthenelse{\equal{#8}{}}{}{\mobilephonesymbol~#8}}
+
+% Personal Information
+\name{Rachel Muir}{}                             
+% \phone[mobile]{+44~(0)~7483~808~358}                   
+\email{rm717@kent.ac.uk}               
+% \quote{Durum Patientia Frango}                       
+\makeatother
+
+
+\begin{document}
+
+\makecvtitle
+\vspace{-2em}
+\section{Education}
+
+\bigskip
+
+\medskip
+\tlcventry{2023}{0}{PhD, Programming Languages and Systems}{Current- Year Two}{}{}{\cvitem{\textbf{Advisors:}}{Prof Mark Batty \& Dr Michael Vollmer -- University of Kent, PLAS}
+\medskip
+Current work involves extending G.Morrisett and D. Walker's typed assembly
+language (TAL). We add vector instructions to the language extending the type
+system and proofs accordingly. My core contributions are designing a grammar,
+type system and operational semantics to capture the behaviour of vector
+instructions. I have implemented these semantics in OCaml with the goal of
+formally proving the correctness of our semantics in Rocq.}
+
+\medskip
+
+
+\tlcventry{2019}{2023}{BSc (Hons)}{University of Kent, Canterbury}
+{}{}{
+\cvitem{\textbf{Dissertation:}}{Formal Verification of a MIR-to-MIR Optimisation}}
+% \cvitem{\textbf{Advisor:}}{Professor Mark Batty}
+% \medskip
+% This dissertation aimed to provide a first step towards proving the soundness of
+% Rust's middle intermediate representation, starting with a modest optimisation (tautology elimination).
+% It required defining a grammar and formal semantics, a formal definition of a
+% target optimisation, and using proof techniques over the semantics to prove their soundness. This project was shortlisted for the PLDI Student
+% Research Competition. % Ask Mark about this last sentence
+
+
+% \textbf{Languages:} Strongest languages are OCaml and Python. Strong
+% foundation in Java. Basic C++ programming skills. \\
+% \textbf{Theory of
+% Computing:} Propositional logic, first-order logic, natural deduction, DPLL,
+% DFA \& NFA, CFGs, Recursive Decent Parsing. \\
+% \textbf{Computer Systems:} Boolean
+% algebra, logic gates, sequential logic, computer architecture i.e. PC, CPU,
+% ALU, GPU, parsing, virtual machines. \\
+% \textbf{Programming Language
+% Implementation:} OCaml basics, compiler architecture, AST, CFG, optimisations,
+% register allocation. \\
+% \textbf{IoT \& Embedded Computer Systems:} Low-level
+% programming, parallelism, RTOS, circuit design, MBED/ESP32 microcontrollers.
+% }
+
+% {Formal Verification of a MIR-to-MIR Optimisation}
+% {\cvitem{\textbf{Advisor:}}{Professor Mark Batty}
+% \medskip
+% This project aimed to provide a first step towards proving the soundness of
+% Rust's middle intermediate representation, starting with a modest optimisation.
+% It required defining a grammar and formal semantics, a formal definition of a
+% target optimisation, and using proof techniques over the semantics to prove the
+% soundness of an optimisation. This project was shortlisted for the PLDI Student
+% Research Competition.}{}
+
+\medskip
+
+\tlcventry{2016}{2019}{College Qualifications}{Bexhill College}{}{}{}
+\cvitemwithcomment{Applied Science}{180 Credit Extended Diploma}{\emph{Distinction* Distinction* Distinction*}}
+
+\cvitemwithcomment{Information Technologies}{90 Credit Certificate}{\emph{Distinction* Distinction*}}
+
+% \cvitemwithcomment{Mathematical Studies}{Certificate}{\emph{B}}
+
+% \cvitemwithcomment{7 GCSEs}{Grades 7-C}{\emph{Maths 7, English B}}
+
+% \section{Research}
+
+
+% \newpage
+
+\section{Work Experience}
+\tldatecventry{2023}{Summer Research Assistant}{The University of Kent}{In-Person}{}
+{This work aimed to provide a first step towards proving the soundness of Rust's
+middle intermediate representation (MIR), starting with a modest optimisation
+(tautology elimination). It required defining a grammar and formal semantics, a
+formal definition of a target optimisation, and using proof techniques over the
+semantics to prove their soundness. This project was shortlisted for the PLDI
+Student Research Competition.}
+
+\medskip
+
+\tlcventry{2019}{2022}{Academic Ambassador}{University of Kent}{Canterbury}{}{}
+% {Working for the central university and School of Computing has involved demonstrating the
+% advantages of further education (FE) and giving insight into student life through on-campus tours
+% and virtual/physical open days such as the First Lego League Challenge. I liaise with teaching staff
+% at outreach schools, and teach secondary school to college age students with regards to FE, it's
+% processes and what to expect. I adapt my communication style accordingly when delivering
+% presentations to up to 30 students. I further developed my skills and confidence by designing and
+% delivering succinct, polished presentations.}
+
+\medskip
+
+\tlcventry{2021}{2022}{Developer and Maintainer}{Smart Start Minds}{London -
+Remote}{\textit{Javascript}}{In my second year of university, I joined a team of
+developers in researching and developing bespoke hardware and software to
+improve and treat mental health conditions. Our neurofeedback hardware, in the
+form of non-invasive imaging (fNIRS), measures changes in the concentration of
+oxygenated haemoglobin. I designed a web-based prototype system to detect lulls
+in mental concentration and to prompt the user to perform an activity,
+increasing concentration above their baseline. This prototype software enabled
+the company to demonstrate the viability of this automated self-treatment method
+to businesses and funders interested in using this technology. More importantly,
+it demonstrated that accessible and affordable treatment could reasonably allow
+treatment of patients in low socio-economic areas globally and patients without
+access to in-person healthcare, internet, or medical funding. I won the UK-wide
+\emph{Undergraduate of the Year} award for this work.}
+
+\medskip
+
+% Last 2 sentences
+\tldatecventry{2022}{Rolls-Royce Data Scientist}{R\textsuperscript{2} Data
+Labs}{London - Hybrid Internship}{\textit{Python}}{I was a part of a team
+developing developing bespoke AI-based software. This role required knowledge of
+Python, Github, and data science methods. Our projects consisted of making
+NLP-based software to aid in presenting large collections of data in a
+human-readable way. We worked through prototyping stages over multiple weeks and
+developed the software into a minimum-viable-product, which we then delivered to
+the customer. I optimised training throughput by reducing the memory footprint
+of data, improving the performance of inference and adding checkpointing and
+data change detection to cut downtime drastically. }
+
+\medskip
+
+\section{Prizes}
+\tldatecventry{2022}{Undergraduate of the Year 2022}{Winner}{Target Jobs}{}{}
+\tldatecventry{2022}{Kent Star}{Winner}{The University of Kent}{}{}
+\tldatecventry{2023}{Student Research Competition}{Shortlisted}{PLDI}{}{}
+
+
+\section{Conferences}
+\tldatecventry{2020}{36th Chaos Communication Congress}{}{Technology and Cyber Security Conference}{Leipzig}{}
+\tldatecventry{2023}{PLDI}{Florida}{Invited - Student Research Competition}{Poster Session}{}
+
+\section{Summer Schools}
+\tldatecventry{2023}{OPLSS}{}{University of Oregon}{}{}
+\tldatecventry{2023}{VetSS}{}{University of Sussex}{}{}
+\tldatecventry{2024}{Advanced Functional Programming}{}{University of Utrecht}{1.5 ECTS}{}
+
+\section{Volunteering}
+% Accessible sentences are split
+\tlcventry{2022}{0}{TinkerSoc}{Committee}{\textit{TinkerSoc.org}}{}{ TinkerSoc
+  is a maker society for hobby electronics, 3D printing, and engineering. I was
+  president for two years, and am now vice-president. I rebuilt the society
+  after COVID, by leading people through their first projects with accessible
+  learning plans. This worked, drawing a more diverse, and less exclusively
+  male, membership. I ran interactive seminars and training courses and built an
+  amazing community. It is my proudest achievement.}
+
+
+\section{References}
+\cvitemwithcomment{Prof. Mark Batty}{M.J.Batty@kent.ac.uk}{}
+\cvitemwithcomment{Dr. Michael Vollmer}{M.Vollmer@kent.ac.uk}{}
+\clearpage
+
+\end{document}
