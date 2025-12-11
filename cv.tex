@@ -49,14 +49,20 @@
 \bigskip
 
 \medskip
-\tlcventry{2023}{0}{PhD, Programming Languages and Systems}{Current- Year Two}{}{}{\cvitem{\textbf{Advisors:}}{Prof Mark Batty \& Dr Michael Vollmer -- University of Kent, PLAS}
+\tlcventry{2023}{0}{PhD, Programming Languages and Systems}{Current- Year Three}{}{}{\cvitem{\textbf{Advisors:}}{Prof Mark Batty \& Dr Michael Vollmer -- University of Kent, PLAS}
 \medskip
-Current work involves extending G.Morrisett and D. Walker's typed assembly
-language (TAL). We add vector instructions to the language extending the type
-system and proofs accordingly. My core contributions are designing a grammar,
-type system and operational semantics to capture the behaviour of vector
-instructions. I have implemented these semantics in OCaml with the goal of
-formally proving the correctness of our semantics in Rocq.}
+Current work involves mechanising G.Morrisett and D.Walker's typed assembly
+language (TAL) in Rocq. My core contributions are mechanising the lemmas and
+theorems presented in the original paper, as well as extending the work with
+mechanised proofs for determinism and type erasure. Future work involves
+extending the language with vector instructions, and extending the type system
+and proofs accordingly.}
+% Current work involves extending G.Morrisett and D. Walker's typed assembly
+% language (TAL). We add vector instructions to the language extending the type
+% system and proofs accordingly. My core contributions are designing a grammar,
+% type system and operational semantics to capture the behaviour of vector
+% instructions. I have implemented these semantics in OCaml with the goal of
+% formally proving the correctness of our semantics in Rocq.
 
 \medskip
 
@@ -115,32 +121,21 @@ formally proving the correctness of our semantics in Rocq.}
 % \newpage
 
 \section{Work Experience}
-\tldatecventry{2023}{Summer Research Assistant}{The University of Kent}{In-Person}{}
+\tldatecventry{2023}{Research Assistant}{The University of Kent}{In-Person}{}
 {This work aimed to provide a first step towards proving the soundness of Rust's
 middle intermediate representation (MIR), starting with a modest optimisation
-(tautology elimination). It required defining a grammar and formal semantics, a
+--- tautology elimination. It required defining a grammar and semantics, a
 formal definition of a target optimisation, and using proof techniques over the
 semantics to prove their soundness. This project was shortlisted for the PLDI
 Student Research Competition.}
 
 \medskip
 
-\tlcventry{2019}{2022}{Academic Ambassador}{University of Kent}{Canterbury}{}{}
-% {Working for the central university and School of Computing has involved demonstrating the
-% advantages of further education (FE) and giving insight into student life through on-campus tours
-% and virtual/physical open days such as the First Lego League Challenge. I liaise with teaching staff
-% at outreach schools, and teach secondary school to college age students with regards to FE, it's
-% processes and what to expect. I adapt my communication style accordingly when delivering
-% presentations to up to 30 students. I further developed my skills and confidence by designing and
-% delivering succinct, polished presentations.}
-
-\medskip
-
 \tlcventry{2021}{2022}{Developer and Maintainer}{Smart Start Minds}{London -
 Remote}{\textit{Javascript}}{In my second year of university, I joined a team of
 developers in researching and developing bespoke hardware and software to
-improve and treat mental health conditions. Our neurofeedback hardware, in the
-form of non-invasive imaging (fNIRS), measures changes in the concentration of
+improve and treat mental health conditions. Our neurofeedback hardware used
+non-invasive imaging (fNIRS) to measures changes in the concentration of
 oxygenated haemoglobin. I designed a web-based prototype system to detect lulls
 in mental concentration and to prompt the user to perform an activity,
 increasing concentration above their baseline. This prototype software enabled
@@ -155,15 +150,26 @@ access to in-person healthcare, internet, or medical funding. I won the UK-wide
 
 % Last 2 sentences
 \tldatecventry{2022}{Rolls-Royce Data Scientist}{R\textsuperscript{2} Data
-Labs}{London - Hybrid Internship}{\textit{Python}}{I was a part of a team
-developing developing bespoke AI-based software. This role required knowledge of
-Python, Github, and data science methods. Our projects consisted of making
-NLP-based software to aid in presenting large collections of data in a
-human-readable way. We worked through prototyping stages over multiple weeks and
-developed the software into a minimum-viable-product, which we then delivered to
-the customer. I optimised training throughput by reducing the memory footprint
-of data, improving the performance of inference and adding checkpointing and
-data change detection to cut downtime drastically. }
+Labs}{London - Hybrid Internship}{\textit{Python}}{My role involved developing
+bespoke AI-based software. I optimised training throughput by reducing the
+memory footprint of data, improving the performance of inference and adding
+checkpointing and data change detection to drastically cut downtime. The project
+consisted of making NLP-based software to aid in presenting large collections of
+data in a human-readable way. Our team worked through prototyping stages over
+multiple weeks and developed the software into a minimum-viable-product, which
+we then delivered to the customer. This project required use of natural language
+processing, clustering of data, and data visualisation.}
+
+\medskip
+
+\tlcventry{2019}{2022}{Academic Ambassador}{University of Kent}{Canterbury}{}{}
+% {Working for the central university and School of Computing has involved demonstrating the
+% advantages of further education (FE) and giving insight into student life through on-campus tours
+% and virtual/physical open days such as the First Lego League Challenge. I liaise with teaching staff
+% at outreach schools, and teach secondary school to college age students with regards to FE, it's
+% processes and what to expect. I adapt my communication style accordingly when delivering
+% presentations to up to 30 students. I further developed my skills and confidence by designing and
+% delivering succinct, polished presentations.}
 
 \medskip
 
@@ -192,8 +198,8 @@ data change detection to cut downtime drastically. }
   president for two years, and am now vice-president. I rebuilt the society
   after COVID, by leading people through their first projects with accessible
   learning plans. This worked, drawing a more diverse, and less exclusively
-  male, membership. I ran interactive seminars and training courses and built an
-  amazing community. It is my proudest achievement.}
+  male, membership. I ran interactive seminars and training courses, and built
+  an amazing community.}
 
 
 \section{References}
